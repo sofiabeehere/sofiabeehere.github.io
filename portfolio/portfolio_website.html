@@ -1,0 +1,231 @@
+<!-- 
+
+Portfolio Website ("Contact") by Sofia Bautista ©
+Created: December 2016
+Last modifed: N/A
+
+Languages used: HTML5, CSS3, and JS (JQuery)
+
+-->
+
+<!doctype html>
+<html lang = "en">
+<head>
+
+	<title> Sofia Bautista | Entry Template </title>
+		<meta charset = "utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!--<meta http-equiv="refresh" content="0; url=http://repo.github.io/folder/index.html" /> -->
+
+		<!-- Loads CSS Stylesheets-->
+		<link rel="stylesheet" href="../css/main.css">
+		<link rel="stylesheet" href="../css/grid.css">
+		<link rel="stylesheet" type="text/css" href="../js/slick/slick/slick.css"/>
+  		<link rel="stylesheet" type="text/css" href="../js/slick/slick/slick-theme.css"/>
+  		<link rel="stylesheet" type="text/css" href="../js/slick-lightbox/slick-lightbox.css"/>
+		<link rel="icon" href = "../img/favicon.ico">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="../js/jquery.min.js"></script>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+</head>
+	<body>
+
+	<section class = "mobile-sidebar" id = "mobile-sidebar">
+
+		<header class = "header-logo">
+
+			<img src = "../img/logo.svg" alt= "personal logo" class = "logo"/>
+			
+			<aside>
+				<h2> Sofia Bautista </h2>
+				<h3> UI/UX Designer | Web Developer</h3>
+			</aside>
+
+			<div class = "menu-btn">
+				<h4> MENU </h4>
+				<img src = "../img/menu.svg" alt = "menu button" id = "menu-icon">
+			</div>
+
+		</header>
+
+		<div class = "mobile-nav">
+			<ul class = "nav-list">
+				<li><a href = "../index.html"><span>WORK</span></a></li>
+				<li><a href = "../about.html"><span>ABOUT</span></a></li>
+				<li><a href = "../contact.html"><span>CONTACT</span></a></li>
+			</ul>
+		</div>
+
+	</section>
+
+	<div id = "mini-header">
+
+		<a href = "../index.html">
+
+			<img src = "../img/back.svg" alt = "back img" class = "back-icon"/>
+
+			<img src = "../img/logo.svg" alt = "go back to home button" class = "logo-icon"/>
+
+		</a>
+
+		<span> back </span>
+
+	</div>
+
+	<section class = "main-content-portfolio">
+
+	<h1> PORTFOLIO WEBSITE </h1>
+
+	<article>
+		
+		<div class = "hero-img"><img src = "./img/1/portfolio banner.png"/></div>
+
+		<h2> background </h2>
+
+		<p> As I start to apply for co-op positions, I took it upon myself to start designing my own personal branding and a portfolio website, which I coded by hand. This portfolio website aims to showcase both academic and professional projects I took part in, ranging from graphic design, UI/UX design, web development, and instructional design. </p>
+
+		<h2> challenge </h2>
+
+		<p> Although I was already well-versed in HTML and CSS, to simulate responsiveness, I had to familiarize myself with JavaScript (particularly jQuery). Before this project, I only had a shallow understanding of JavaScript and jQuery, so I had to read and understand various printed and online resources during the project to increase my fluency. </p>
+
+		<h2> role </h2>
+
+		<p> I was the primary designer and web developer for this project. Initially, I sketched out potential logos and layouts digitally and then used Axure RP to create wireframes for the website. Meanwhile, my personal logo was developed using Adobe Illustrator, while I used Sublime Text as a code editor for my portfolio website. </p>
+
+		<h2> ideation </h2>
+
+		<p> I started this project by sketching possible logos for my personal branding. I wanted to develop a brand that encapsulated my aspirations as a designer that loves to program. In some way, I used the idiom "package deal" as inspiration for my final logo, with each aspect of myself represented through a pentagon - the colourful gold one symbolizing my "designer" side, the monochrome one symbolizing my austere "programmer" side, tied together using a script font of my initials "SB". </p>
+
+		<p> Using the message conveyed in my final logo, I started sketching possible layouts for my website. Instead of having a common top navigation bar, driven by the principle that people read from left to right, I wanted to have my navigation as a left sidebar. The portfolio entries would then be laid out as a 3-column grid, which would collapse into a 2-column grid on tablets and 1-column on mobile phones. Upon clicking one of the portfolio entries, a modal box describing the experience would pop-up. </p>
+
+		<!-- [image of brown package + final logo decision sketch] -->
+		<!-- [image of website sketches - both web and mobile] -->
+		<img class = "graphic" src="./img/1/portfolio logo sketches.png"/>
+
+		<h3> wireframes </h3>
+
+		<!-- [slideshow of greybox wireframes - both web and mobile] -->
+		<div class="wireframes">
+			<div>
+				<a href="./img/1/wireframe 1.png">
+					<img src="./img/1/wireframe 1.png"/>
+				</a>
+			</div>
+			<div>
+				<a href="./img/1/wireframe 2.png">
+					<img src="./img/1/wireframe 2.png"/>
+				</a>
+			</div>
+			<div>
+				<a href="./img/1/wireframe 3.png">
+					<img src="./img/1/wireframe 3.png"/>
+				</a>
+			</div>
+			<div>
+				<a href="./img/1/wireframe 4.png">
+					<img src="./img/1/wireframe 4.png"/>
+				</a>
+			</div>
+		</div>
+		<!-- Carousel function from http://kenwheeler.github.io/slick/ -->
+		<!-- Lightbox add-on function from https://github.com/mreq/slick-lightbox -->
+
+		<h2> execution </h2>
+
+		<p> I took my final logo sketch and created it on Adobe Illustrator. The colour scheme started from a golden-brown colour combining an earthy brown from package wrapping paper and my personal preference for gold, along with the timeless pair of black and white. </p>
+
+		<!-- [image of typography, colour scheme, and final logo decision] -->
+		<img class = "graphic" src="./img/1/style-guide.png"/>
+
+		<p> As for my portfolio website, as I started developing it, I changed many of my initial design decisions: </p>
+
+		<ul>
+
+			<li> Instead of the modal box for every portfolio entry, I reserved separate pages with a redirect button for each one, because the modal box was very dense looking and thus limited the amount of content I can include for each entry. </li>
+			<li> 	After receiving feedback from my co-op advisor, instead of a single-line title banner for each portfolio entry image appearing on hover, a white box with the title of the portfolio entry and the design domain it belonged to. </li>
+			<li> 	The filter feature originally was a dropdown in the sidebar, but was moved to the top of the portfolio entry images for better visibility and relevancy. </li>
+
+		</ul>
+
+		<h2> results </h2>
+
+		<p> At many times, especially when I was considering if I should deviate from my initial wireframes, I was internally struggling between <i> aesthetic flair </i> versus <i> simplicity and functionality </i>. In the end, I always chose simplicity and functionality because I wanted to make sure users of my website could easily find, read, and understand my portfolio and its entries, as well as get a sense of what my priorities are when I am designing and developing a website. </p>
+
+		<p> The code for this project can be found on my GitHub or by <a href = "#">clicking here</a>. </p>
+
+	</article>
+
+	</section>
+
+	<script type="text/javascript" src="../js/slick/slick/slick.min.js"></script>
+	<script type="text/javascript" src="../js/slick-lightbox/slick-lightbox.js"></script>
+	<script type="text/javascript">
+		$('.wireframes').slick({
+			slidesToShow: 1,
+			dots: true,
+			adaptiveHeight: true,
+			accessibility: false,
+			prevArrow:"<img class='a-left control-c prev slick-prev' src='../img/previous-page.svg'>",
+      			nextArrow:"<img class='a-right control-c next slick-next' src='../img/next-page.svg'>"
+		});
+
+		$('.screenshots').slick({
+			slidesToShow: 1,
+			dots: true,
+			adaptiveHeight: true,
+			accessibility: false,
+			prevArrow:"<img class='a-left control-c prev slick-prev' src='../img/previous-page.svg'>",
+      			nextArrow:"<img class='a-right control-c next slick-next' src='../img/next-page.svg'>"
+		});
+
+		$('.wireframes').slickLightbox({
+			itemSelector        : 'a',
+			navigateByKeyboard  : false
+		});
+
+		$('.screenshots').slickLightbox({
+			itemSelector        : 'a',
+			navigateByKeyboard  : false
+		});
+	  </script>
+	<script src="../js/zepto.js"></script>
+	<!-- <script src="../js/script.js"></script> -->
+	<script>
+		"use strict";
+
+		console.log("Javascript is running!");
+
+		$(window).on('load resize', function () {
+
+			var width = window.innerWidth;
+
+			console.log("Width: "+width);
+
+				if (width<945) {
+					document.getElementById("mini-header").style.display = "none";
+					document.getElementById("mobile-sidebar").style.display = "block";
+					$(".mobile-nav").hide();
+
+
+				$(".menu-btn").click(function(){
+					if ( $('#menu-icon').attr('src') == '../img/menu.svg' ) {
+						$("#menu-icon").attr("src","../img/close.svg");
+						$(".mobile-nav").slideDown();
+					} else {
+						$("#menu-icon").attr("src","../img/menu.svg");
+						$(".mobile-nav").slideUp();
+					}
+	   			 });
+
+				} else {
+					document.getElementById("mini-header").style.display = "block";
+					document.getElementById("mobile-sidebar").style.display = "none";
+				}
+
+		});
+
+	</script>
+
+	</body>
+</html>

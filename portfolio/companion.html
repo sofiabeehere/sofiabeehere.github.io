@@ -1,0 +1,307 @@
+<!-- 
+
+Portfolio Website ("Companion") by Sofia Bautista ©
+Created: December 2016
+Last modifed: N/A
+
+Languages used: HTML5, CSS3, and JS (JQuery)
+
+-->
+
+<!doctype html>
+<html lang = "en">
+<head>
+
+	<title> Sofia Bautista | Entry Template </title>
+		<meta charset = "utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!--<meta http-equiv="refresh" content="0; url=http://repo.github.io/folder/index.html" /> -->
+
+		<!-- Loads CSS Stylesheets-->
+		<link rel="stylesheet" href="../css/main.css">
+		<link rel="stylesheet" href="../css/grid.css">
+		<link rel="stylesheet" type="text/css" href="../js/slick/slick/slick.css"/>
+  		<link rel="stylesheet" type="text/css" href="../js/slick/slick/slick-theme.css"/>
+  		<link rel="stylesheet" type="text/css" href="../js/slick-lightbox/slick-lightbox.css"/>
+		<link rel="icon" href = "../img/favicon.ico">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="../js/jquery.min.js"></script>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+</head>
+	<body>
+
+	<section class = "mobile-sidebar" id = "mobile-sidebar">
+
+		<header class = "header-logo">
+
+			<img src = "../img/logo.svg" alt= "personal logo" class = "logo"/>
+			
+			<aside>
+				<h2> Sofia Bautista </h2>
+				<h3> UI/UX Designer | Web Developer</h3>
+			</aside>
+
+			<div class = "menu-btn">
+				<h4> MENU </h4>
+				<img src = "../img/menu.svg" alt = "menu button" id = "menu-icon">
+			</div>
+
+		</header>
+
+		<div class = "mobile-nav">
+			<ul class = "nav-list">
+				<li><a href = "../index.html"><span>WORK</span></a></li>
+				<li><a href = "../about.html"><span>ABOUT</span></a></li>
+				<li><a href = "../contact.html"><span>CONTACT</span></a></li>
+			</ul>
+		</div>
+
+	</section>
+
+	<div id = "mini-header">
+
+		<a href = "../index.html">
+
+			<img src = "../img/back.svg" alt = "back img" class = "back-icon"/>
+
+			<img src = "../img/logo.svg" alt = "go back to home button" class = "logo-icon"/>
+
+			<span> back </span>
+
+		</a>
+
+	</div>
+
+	<section class = "main-content-portfolio">
+
+	<h1 style = "margin: 0 30%;"> COMPANION APP FEATURE DESIGN </h1>
+
+	<article>
+		
+		<div class = "hero-img"><img src = "./img/2/companion banner.jpg"/></div>
+
+		<h2> background </h2>
+
+		<p> This feature design was one of the projects for IAT 334 (Interface Design), an upper-division undergraduate course which explores the art and design of interactive human-computer interfaces and introduces design methods, prototyping and evaluation of user interfaces. For this project, my partner, Ling Xiao Pan and I chose <a href = "https://companionapp.io/">Companion</a>, a mobile safety application which allows family and friends to contact and know the location of the user in times of trouble during their journey. </p>
+
+		<h2> challenge </h2>
+
+		<p> We were tasked with conducting our own user research to conceptualize a new feature for Companion. This was the first time I was exposed to formal user experience research techniques like holding my own interviews with beginner, intermediate, and expert users. Although I have conducted surveys before in an instructional design context, it was a learning experience for me to take the research I collected and design a feature from scratch for a mobile application, especially for iOS as an individual used to Android. </p>
+
+		<h2> role </h2>
+
+		<p> I was the main facilitator during the user interviews, and sometimes functioned as a note-taker as well. I worked with my partner in ideating a new feature using the research we gained, creating the wireframes in Axure RP for two out of the three features we proposed to our instructor and mockups for the final design in Adobe Illustrator. </p>
+
+		<h2> ideation </h2>
+
+		<h3> research </h3>
+
+		<p> In starting this project, my partner and I set up seven user interviews (5 females and 2 males). Two weeks prior to the interview, we asked our participants to download Companion and use it as much as they can until we met them for their interview. The main interview method my partner and I used were <a href = "https://www.nngroup.com/articles/thinking-aloud-the-1-usability-tool/">think aloud</a> tests by giving users some <a href = "https://www.usability.gov/how-to-and-tools/methods/scenarios.html">goal-based scenarios</a>. We had them vocally walk us through the steps they would take to complete the goal outlined by the scenario.</p>
+
+		<h3> personas </h3>
+
+		<p> Using the <a href = "./img/2/companion app user research report.pdf">research we collected from user interviews </a>, we synthesized our findings into personas: </p>
+
+		<div class="personas">
+			<div>
+				<a href="./img/2/persona 1.jpg">
+					<img src="./img/2/persona 1.jpg"/>
+				</a>
+			</div>
+			<div>
+				<a href="./img/2/persona 2.jpg">
+					<img src="./img/2/persona 2.jpg"/>
+				</a>
+			</div>
+			<div>
+				<a href="./img/2/persona 3.jpg">
+					<img src="./img/2/persona 3.jpg"/>
+				</a>
+			</div>
+		</div>
+		<!-- Carousel function from http://kenwheeler.github.io/slick/ -->
+		<!-- Lightbox add-on function from https://github.com/mreq/slick-lightbox -->
+
+		<h3> wireframes </h3>
+
+		<p> Going forward we conceptualized and wireframed through Axure RP three potential features from the pain points and frustrations expressed during our user interviews and outlined in our personas: </p>
+
+		<p><i>Feature #1 (Interactive Notifications with Action Buttons)</i> - Through lockscreen notifications, users can easily end their trip, contact their companion, or call the police, as well as check the progress of their trip, all without unlocking their phone. This feature eliminates the steps of having to type a passcode and open the app, because during our user interviews participants, especially car commuters, complained about having to press too many buttons to access the application. <i style = "font-weight: bold;">Personally designed. </i> </p>
+		
+		<p><i>Feature #2 (Adding a Companion Through Social Media)</i> - By connecting to a social media app, a user can add their companion from their friend list on social media.  This feature provides another way to let users add people as their companion, especially for young adults, as they usually contact their friends on the social media rather than send texts. <i style = "font-weight: bold;">Designed by Ling Xiao Pan.</i></p>
+		
+		<p><i>Feature #3 (Calculate Escape Route Button)</i> - Utilizing Google Maps Directions, this feature calculates possible escape routes for the user if they wish to avoid obstacles like traffic or suspicious individuals. Through this, before starting and during their trip, the user can take the most convenient route based on current road conditions. <i style = "font-weight: bold;">Personally designed.</i></p>
+		
+		<!-- [slideshow of wireframes (3 screens per slide)] -->
+		<div class="feature3_wireframes">
+			<div>
+				<a href="./img/2/wireframes 1.png">
+					<img src="./img/2/wireframes 1.png"/>
+				</a>
+			</div>
+			<div>
+				<a href="./img/2/wireframes 2.png">
+					<img src="./img/2/wireframes 2.png"/>
+				</a>
+			</div>
+			<div>
+				<a href="./img/2/wireframes 3.png">
+					<img src="./img/2/wireframes 3.png"/>
+				</a>
+			</div>
+		</div>
+		<!-- Carousel function from http://kenwheeler.github.io/slick/ -->
+		<!-- Lightbox add-on function from https://github.com/mreq/slick-lightbox -->
+
+	<h2> execution </h2>
+
+	<p> After consulting with our instructor and teaching assistant, as well as discussing among ourselves which design would be the most viable with room for further refinement, we decided to go with Feature #3 (Calculate Escape Route Button). To limit the scope of our feature design, we came up with one, smaller persona focusing on the goals we aim to meet with our feature: </p>
+
+	<!-- [screenshot of mini-persona] -->
+	<img class = "graphic" src="./img/2/mini-persona.png"/>
+
+	<p> During our ideation refinement meeting, we printed out the wireframes for Feature #3 and taped them onto a whiteboard. To find any missing gaps between screens as well as consider any potential opportunities for design, we did a pair critique by sketching and making notes around each wireframe. </p>
+
+	<p> Using the ideas from the meeting, we finalized the elements of the feature: </p>
+
+	<ul>
+
+		<li>Map can be enlarged and minimized throughout trip by pinch gestures</li>
+		<li>Escape route can be selected on the map</li>
+		<li>Police stations are highlighted on the map as possible escape routes</li>
+		<li>Step-by-step directions are displayed to user during their trip</li>
+		<li>Alternatively, user can also view the full directions while still being able to access main UI</li>
+
+	</ul>
+
+	<p> The final step was dividing the feature and elements into two and I was tasked with developing mockups for the navigation feature, which you can view below: </p>
+
+	<!-- [slideshow of mockups (3-2-2)] -->
+		<div class="feature3_mockups">
+			<div>
+				<a href="./img/2/mockup1.png">
+					<img src="./img/2/mockup1.png"/>
+				</a>
+			</div>
+			<div>
+				<a href="./img/2/mockup2.png">
+					<img src="./img/2/mockup2.png"/>
+				</a>
+			</div>
+			<div>
+				<a href="./img/2/mockup3.png">
+					<img src="./img/2/mockup3.png"/>
+				</a>
+			</div>
+		</div>
+		<!-- Carousel function from http://kenwheeler.github.io/slick/ -->
+		<!-- Lightbox add-on function from https://github.com/mreq/slick-lightbox -->
+
+	<h2> results </h2>
+
+	<p> Through this project, I was able to hone my skills in visual design by applying them to a user interface context. Although I have surveyed users before in instructional design to gain insight on learning experiences, the user research I did during this project was much more extensive and employed a variety of methods to know anything more about their lives and goals, which would then be integrated somehow into our application of choice. The one thing I could take away from this project was that a design was more satisfying and effective for both the user and the designer when you go through the many steps of research to understand the <i> five Ws (who, what, where, why, in what way, by what means) </i> in relation to how a user might interact with a piece of technology. For future projects, I am more willing now to perform user research, no matter the method, how long it takes, the difficulties I may face, as long as I gain a further understanding in the mentality of users. </p>
+
+	</article>
+
+	</section>
+
+	<script type="text/javascript" src="../js/slick/slick/slick.min.js"></script>
+	<script type="text/javascript" src="../js/slick-lightbox/slick-lightbox.js"></script>
+	<script type="text/javascript">
+		$('.personas').slick({
+			slidesToShow: 1,
+			dots: true,
+			adaptiveHeight: true,
+			accessibility: false,
+			prevArrow:"<img class='a-left control-c prev slick-prev' src='../img/previous-page.svg'>",
+      			nextArrow:"<img class='a-right control-c next slick-next' src='../img/next-page.svg'>"
+		});
+
+		$('.feature1_wireframes').slick({
+			slidesToShow: 1,
+			dots: true,
+			adaptiveHeight: true,
+			accessibility: false,
+			prevArrow:"<img class='a-left control-c prev slick-prev' src='../img/previous-page.svg'>",
+      			nextArrow:"<img class='a-right control-c next slick-next' src='../img/next-page.svg'>"
+		});
+
+		$('.feature3_wireframes').slick({
+			slidesToShow: 1,
+			dots: true,
+			adaptiveHeight: true,
+			accessibility: false,
+			prevArrow:"<img class='a-left control-c prev slick-prev' src='../img/previous-page.svg'>",
+      			nextArrow:"<img class='a-right control-c next slick-next' src='../img/next-page.svg'>"
+		});
+
+		$('.feature3_mockups').slick({
+			slidesToShow: 1,
+			dots: true,
+			adaptiveHeight: true,
+			accessibility: false,
+			prevArrow:"<img class='a-left control-c prev slick-prev' src='../img/previous-page.svg'>",
+      			nextArrow:"<img class='a-right control-c next slick-next' src='../img/next-page.svg'>"
+		});
+
+		$('.personas').slickLightbox({
+			itemSelector        : 'a',
+			navigateByKeyboard  : false
+		});
+
+		$('.feature1_wireframes').slickLightbox({
+			itemSelector        : 'a',
+			navigateByKeyboard  : false
+		});
+
+		$('.feature3_wireframes').slickLightbox({
+			itemSelector        : 'a',
+			navigateByKeyboard  : false
+		});
+
+		$('.feature3_mockups').slickLightbox({
+			itemSelector        : 'a',
+			navigateByKeyboard  : false
+		});
+	  </script>
+	<script src="../js/zepto.js"></script>
+	<!-- <script src="../js/script.js"></script> -->
+	<script>
+		"use strict";
+
+		console.log("Javascript is running!");
+
+		$(window).on('load resize', function () {
+
+			var width = window.innerWidth;
+
+			console.log("Width: "+width);
+
+				if (width<945) {
+					document.getElementById("mini-header").style.display = "none";
+					document.getElementById("mobile-sidebar").style.display = "block";
+					$(".mobile-nav").hide();
+
+
+				$(".menu-btn").click(function(){
+					if ( $('#menu-icon').attr('src') == '../img/menu.svg' ) {
+						$("#menu-icon").attr("src","../img/close.svg");
+						$(".mobile-nav").slideDown();
+					} else {
+						$("#menu-icon").attr("src","../img/menu.svg");
+						$(".mobile-nav").slideUp();
+					}
+	   			 });
+
+				} else {
+					document.getElementById("mini-header").style.display = "block";
+					document.getElementById("mobile-sidebar").style.display = "none";
+				}
+
+		});
+
+	</script>
+
+	</body>
+</html>
