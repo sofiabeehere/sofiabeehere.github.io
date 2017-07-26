@@ -1,0 +1,769 @@
+/* 
+
+Portfolio Website by Sofia Bautista ©
+Created: December 2016
+Last modifed: N/A
+
+Languages used: HTML5, CSS3, and JS (Zepto.js)
+
+*/
+
+/* Typography Style */
+@import url('https://fonts.googleapis.com/css?family=Merriweather:300i');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300');
+
+@font-face { /* h1 heading*/
+    font-family: 'Bebas Neue';
+    font-weight: normal;
+    font-style: normal;
+    src: url('fonts/BebasNeue.eot');
+    src: url('fonts/BebasNeue.eot?#iefix') format('embedded-opentype'),
+        url('fonts/BebasNeue.woff2') format('woff2'),
+        url('fonts/BebasNeue.woff') format('woff'),
+        url('fonts/BebasNeue.ttf') format('truetype');
+}
+
+
+/* GENERAL */
+
+body {
+	margin: 0;
+	/*max-width: 1280px;*/
+}
+
+/* MAIN SIDEBAR/MENU STYLE */
+
+#sidebar {
+	display: block;
+}
+
+.main-sidebar, .sidebar:visited .main-sidebar {
+	visibility: hidden;
+	opacity: 0;
+	height: 23em;
+	transition: all 0.5s ease-in-out;
+}
+
+.sidebar:hover .main-sidebar,
+.sidebar:active .main-sidebar,
+.sidebar:focus .main-sidebar {
+	visibility: visible;
+	opacity: 1;
+	transition: all 0.5s ease-in-out;
+}
+
+.social-media {
+	position: fixed;
+	margin: auto;
+	width: 24.1%;
+	bottom: 10px;
+	padding: 0 6%;
+}
+
+.social-media img {
+	width: 2.2em;
+	cursor: pointer;
+}
+
+.sidebar .hover-message {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 500;
+	font-size: 9pt;
+	letter-spacing: 1pt;
+	margin: 0;
+	padding-left: 2.5em;
+	text-align: center;
+	color: #a9a9a9;
+	visibility: visible;
+	opacity: 1;
+	transition: all 1s ease-in-out;
+}
+
+.sidebar:hover .hover-message,
+.sidebar:active .hover-message,
+.sidebar:focus .hover-message {
+	text-align: center;
+	visibility: hidden;
+	opacity: 0;
+	transition: all 0.3s ease-in-out;
+}
+
+/* MINI-SIDEBAR STYLE */
+
+.mini-sidebar {
+	position: fixed;
+	z-index: 10;
+	width: 75px;
+	height: 100vh;
+	padding: 0.8em 0.5em;
+	background-color: white;
+	border-right: solid 0.8px black;
+}
+
+/*#mini-sidebar {
+	display: none;
+}*/
+
+.mini-logo {
+	width: 100%;
+	margin-bottom: 0.8em;
+}
+
+.mini-icon {
+	width: 40%;
+	margin: 15% 30%;
+	cursor: pointer;
+}
+
+.mini-sidebar p {
+	font-family: 'Montserrat', 'Roboto', sans-serif;
+	font-size: 9pt;
+	text-align: center;
+	margin: 0;
+	opacity: 0;
+	transition: all 0.3s ease;
+}
+
+.mini-btn {
+	text-decoration: none;
+	color: #26231d;
+	margin: 0;
+	opacity: 1;
+}
+
+.mini-btn:hover p {
+/*.mini-sidebar:hover p {*/
+	opacity: 1;
+	transition: all 0.3s ease;
+}
+
+/* Header */
+.header-logo {
+	padding: 3em 0.7em 2em 2.35em;
+}
+
+.header-logo img {
+	width: 80px;
+	float: left;
+	padding-top: -1em;
+	padding-right: 0.6em;
+}
+
+.header-logo h2,
+.header-logo h3 {
+	line-height: 0em;
+	letter-spacing: 0.4pt;
+}
+
+.header-logo h2 {
+	font-family: 'Bebas Neue', sans-serif;
+	font-size: 26pt;
+	margin: 0.7em 0;
+}
+
+.header-logo h3 {
+	font-family: 'Merriweather', serif;
+	font-weight: 500;
+	font-size: 8.7pt;
+}
+
+.header-logo aside {
+	padding: 0.4em 0 0 0.5em;
+}
+
+.tagline {
+	font-family: 'Montserrat', 'Roboto', sans-serif;
+	font-size: 10pt;
+	font-weight: 500;
+	letter-spacing: 0.5pt;
+	line-height: 1.5em;
+	text-align: center;
+	padding: 0 1em 0 3.3em;
+	margin: 0;
+}
+
+.tagline span {
+	font-family: 'Merriweather', serif;
+	font-weight: 600;
+	color: #26231d;
+	text-decoration: none;
+	font-style: normal;
+	/*border-bottom: 1.5px solid black;*/
+	transition: all 0.5s ease-in-out;
+}
+
+/*.tagline span:hover  {
+	/*color: #c69e3b;
+	font-family: 'Merriweather', serif;
+	transition: all 0.5s ease-in-out;
+}*/
+
+/* Navigation */
+
+.main-nav {
+	padding: 2em 0 1.5em 1.5em;
+}
+
+.main-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.main-nav li a {
+    display: block;
+    font-family: 'Montserrat', 'Roboto', sans-serif;
+    font-size: 11pt;
+    text-align: center;
+    color: #26231d;
+    line-height: 2em;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.main-nav li a:after {
+	display:block;
+	content: '';
+	border-bottom: 1.5px solid black;
+	transform: scaleX(0);  
+	transition: transform 250ms ease-in-out;
+}
+
+.main-nav li a:hover:after {
+	transform: scaleX(1);
+}
+
+/* Mobile Navigation */
+
+.mobile-nav {
+	margin: 40% 0;
+	height: 100vh;
+	border-bottom: 0.5px solid black;;
+}
+
+.mobile-nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+.mobile-nav li a {
+	display: block;
+	font-family: 'Montserrat', 'Roboto', sans-serif;
+	font-size: 20pt;
+	text-align: center;
+	color: #26231d;
+	line-height: 2em;
+	padding: 8px 16px;
+	text-decoration: none;
+	}
+
+/* Filter Button Style */
+
+.filter {
+	padding-left: 2.2em;
+}
+
+.filter-list {
+	visibility: hidden;
+	opacity: 0;
+	list-style-type: none;
+	width: 100%;
+	padding-left: 5.5em;
+	transition: all 0.3s ease-in-out;
+}
+
+.filter:hover .filter-list {
+	visibility: visible;
+	opacity: 1;
+	transition: all 0.5s ease-in-out;
+}
+
+.filter-list li,
+.filter-button {
+	float: left;
+}
+
+.filter-button {
+	font-family: 'Montserrat', 'Roboto', sans-serif;
+	font-weight: 600;
+	font-size: 10pt;
+	letter-spacing: 1pt;
+	padding: 0.5em;
+	border: 1px solid black;
+	background:none;
+	transition: all 0.3s;
+}
+
+.filter:hover .filter-button {
+	background-color: #26231d;
+	color: #fff;
+	cursor: pointer;
+	transition: all 0.5s;
+}
+
+.filter-list li {
+	padding-top: 0.4em;
+}
+
+.filter-list li a {
+	font-family: 'Merriweather', sans-serif;
+	font-weight: bold;
+	color: #26231d;
+	text-decoration: none;
+	padding: 1em 0 0.3em 0;
+	margin: 0 1em;
+	transition: color 0.5s ease;
+}
+
+
+.filter-list li a:hover {
+	/*color: #c69e3b;*/
+	border-bottom: 1px solid black;
+	transform: scaleX(0);  
+	transition: transform 250ms ease-in-out;
+}
+
+/* Experience Cards Style */
+.experience-card {
+	position: relative;
+	margin: 1em 0.5em;
+}
+
+.experience-img {
+	z-index: 1;
+}
+
+.experience-card-caption:before {
+	position: absolute;
+}
+
+.experience-card-caption {
+	font-family: 'Bebas Neue', sans-serif;
+	font-size: 17pt;
+	position: absolute;
+	z-index: -1;
+    	opacity: 0;
+    	visibility: hidden;
+    	background-color: rgba(255, 255, 255, 0.6);
+    	top: 0;
+    	width: 101.5%;
+    	height: 100%;
+    	transition: transform 0.5s, z-index 0.5s, visibility 0.5s,
+	opacity 0.1s ease-in-out;
+	display: table;
+}
+
+.experience-card-caption .wrap {
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+	height: 8.85em;
+}
+
+.experience-card-caption h5 {
+	font-family: 'Bebas Neue', sans-serif;
+	font-size: 17pt;
+	text-align: center;
+	letter-spacing: 0.08em;
+	margin-top: 5%;
+}
+
+.experience-card-caption p {
+	font-family: 'Merriweather', sans-serif;
+	font-size: 10pt;
+	text-align: center;
+	margin: 45% 0;
+	width: 100%;
+	position: absolute;
+	top: 0;
+}
+
+.experience-card:hover .experience-card-caption {
+	z-index: 2;
+	visibility: visible;
+	opacity: 1;
+	cursor: pointer;
+	transition: 0.8s ease-in-out;
+}
+
+/* Experience Page Style - VER 1*/
+
+.main-content-info {
+	display: none; /* Hidden by default */
+	position: absolute; /* Stay in place */
+	z-index: 0; /* Sit on top */
+	top: 0;
+	/*left: 75px;*/
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	background-color: white;
+	-webkit-animation-name: fadeIn; 
+	-webkit-animation-duration: 0.4s;
+	animation-name: fadeIn;
+	animation-duration: 0.4s
+}
+
+@-webkit-keyframes fadeIn {
+    from {opacity: 0} 
+    to {opacity: 1}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0} 
+    to {opacity: 1}
+}
+
+.experience-info {
+	display: block;
+    	margin: 1.5% auto;
+    	width: 80%;
+    	background-color: white;
+    	padding: 1em 0 1.5em 4%;
+}
+
+.close-button {
+	text-align: right;
+	padding-right: 1em;
+	height: 0;
+}
+
+.close-button button,
+.close-button h4 {
+	display: inline-block;
+}
+
+.close-button button {
+	border: none;
+	background-color: transparent;
+}
+
+.close-button h4 {
+	visibility: hidden;
+	opacity: 0;
+	margin: 0;
+	transition: all 0.3s ease-in-out;
+}
+
+.close-button:hover h4 { 
+	visibility: visible;
+	opacity: 1;
+	transition: all 0.5s ease-in-out;
+}
+
+.experience-info-slideshow {
+	display: block;
+    	margin: auto;
+	width: 85.5%;
+}
+
+.experience-info-slideshow-nav {
+	display: block;
+    	margin: auto;
+	width: 100%;
+}
+
+.experience-info-slideshow-img {
+	display: block;
+    	margin: auto;
+	width: 100%;
+}
+
+.experience-info-slideshow-img img {
+	padding: 0;
+	margin-bottom: 0.5em;
+}
+
+.experience-info h1 {
+	font-family: 'Bebas Neue', sans-serif;
+	font-size: 25pt;
+	letter-spacing: 0.5pt;
+	text-align: center;
+	margin: 0 35% 0.8em 35%;
+	border-bottom: 1px solid black;
+}
+
+.experience-info .small-experience-info-img {
+	padding: 0 0.35em;
+}
+
+.experience-info-caption {
+	font-family: 'Montserrat', 'Roboto', sans-serif;
+	font-size: 8pt;
+	text-align: center;
+	font-style: italic;
+	letter-spacing: 0.3pt;
+	line-height: 1.5em;
+	margin: 0 0 1em 0;
+}
+
+.experience-content {
+	/*overflow-y: scroll;*/
+	display: block;
+	margin: auto;
+	width: 100%;
+	float: left;
+}
+
+.experience-content aside {
+	padding: 0.5em 1em;
+}
+
+.experience-content p {
+	font-size: 11pt;
+	line-height: 18pt;
+}
+
+.experience-content img {
+	width: 100%;
+}
+
+/* Experience Page Navigation */
+
+.next-page-btn img {
+	position: fixed;
+	width: 7%;
+	margin: 5em 0 0 1em;
+	cursor: pointer;
+}
+
+.previous-page-btn img {
+	position: fixed;
+	width: 7%;
+	margin: 13.5em 0 0 5.5em;
+	cursor: pointer;
+}
+
+/* Experience Page Style - VER 2*/
+
+#mini-header {
+	position: fixed;
+	width: 12%;
+	margin: 0.8em;
+	cursor: pointer;
+}
+
+#mini-header a {
+	text-decoration: none;
+	margin: 0;
+}
+
+.back-icon {
+	width: 30.3px;
+	margin: 8px 0;
+}
+
+.logo-icon {
+	width: 53.1px;
+	margin: 0 8px;
+	filter: gray;
+  	-webkit-filter: grayscale(100%);
+}
+
+#mini-header:hover .logo-icon {
+	filter: none;
+  	-webkit-filter: grayscale(0%);
+}
+
+#mini-header span {
+	position: absolute;
+ 	margin: 1em 0.5em;
+	font-family: 'Merriweather', serif;
+	font-weight: 600;
+	color: #26231d;
+	text-decoration: none;
+	font-style: normal;
+ 	visibility: hidden;
+ 	opacity: 0;
+ 	transition: opacity 0.5s ease;
+}
+
+#mini-header:hover span {
+	visibility: visible;
+	opacity: 1;
+	transition: all 0.5s ease-in;
+}
+
+.main-content-portfolio {
+	padding: 1.5em;
+}
+
+.main-content-portfolio h1 {
+	font-family: 'Bebas Neue', sans-serif;
+	font-size: 25pt;
+	letter-spacing: 3pt;
+	line-height: 0;
+	text-align: center;
+	display: block;
+	margin: 0 35%;
+	padding: 1em 0;
+	border-bottom: solid 1px black;
+}
+
+.main-content-portfolio article {
+	margin: 3em 15%;
+}
+
+.main-content-portfolio .hero-img {
+	width: 100%;
+	text-align: center; /* ensures the image is always in the h-middle */
+    	overflow: hidden;
+}
+
+.main-content-portfolio article h2 {
+	position: inherit;
+ 	margin: 1em 0;
+	font-family: 'Merriweather', serif;
+	font-weight: 600;
+	color: #26231d;
+	text-decoration: none;
+	font-style: normal;
+}
+
+.main-content-portfolio article h3 {
+	position: inherit;
+ 	margin: 1em 0;
+	font-family: 'Merriweather', serif;
+	font-weight: 200;
+	font-size: 14pt;
+	color: #26231d;
+	text-decoration: none;
+	font-style: normal;
+}
+
+.main-content-portfolio li {
+	font-family: 'Montserrat', 'Roboto', sans-serif;
+	font-size: 11pt;
+	letter-spacing: 0.3pt;
+	line-height: 1.8em;
+	margin: 0;
+}
+
+.hero-img img {
+	width: 100%;
+}
+
+.img-carousel {
+	width: 85%; 
+	margin: 0 auto; 
+	display: block;
+}
+
+.img-carousel img {
+	padding-bottom: 1em;
+}
+
+.main-content-portfolio .graphic {
+	display: block;
+    	margin: auto;
+    	width: 80%;
+}
+
+/* Page Style */
+
+/*[class^='main-content-'] {
+	display: inline-block;
+}*/
+
+.main-content-work {
+	display: inline-block;
+	margin: 2.8em 1.8em 0 1.8em;
+}
+
+.main-content-work a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.main-content-about,
+.main-content-contact {
+	display: inline-block;
+	margin: 3.5em 4em;
+	/*padding-top: 3.5em;*/
+}
+
+.main-content-about h1,
+.main-content-contact h1 {
+	font-family: 'Bebas Neue', sans-serif;
+	font-size: 25pt;
+	letter-spacing: 3pt;
+	line-height: 0;
+	text-align: center;
+	display: block;
+	margin: 0 40%;
+	padding: 1em 0;
+	border-bottom: solid 1px black;
+}
+
+.main-content-contact h1 {
+	margin: 0 20%;
+    padding: 1em 1em;
+    width: 20%;
+    position: absolute;
+}
+
+.main-content-about article {
+	margin: 3em 0;
+}
+
+.main-content-contact article {
+	margin: 3em 40%;
+}
+
+article img {
+	display: inline-block;
+	padding-bottom: 2em;
+}
+
+article p {
+	font-family: 'Montserrat', 'Roboto', sans-serif;
+	font-size: 11pt;
+	letter-spacing: 0.3pt;
+	line-height: 1.8em;
+	margin: 0;
+	margin-bottom: 1em;
+}
+
+article a {
+	color: #26231d;
+	font-style: italic;
+}
+
+/* Contact Form Style */
+
+.contact-form {
+	padding-top: 3em;
+}
+
+form input {
+	display: block;
+	width: 32em;
+	padding: 0.5em 0.5em;
+	margin: 1em 0;
+}
+
+form textarea {
+	display: block;
+	width: 32em;
+	height: 15em;
+	padding: 0.5em 0.5em;
+	margin: 1em 0;
+}
+
+form button {
+	font-family: 'Montserrat', 'Roboto', sans-serif;
+	background: none;
+	border: 1px solid black;
+	display: block;
+	padding: 0.5em 0.5em;
+	transition: all 0.5s;
+}
+
+form button:hover {
+	background-color: #26231d;
+	color: #fff;
+	transition: all 0.5s;
+}
