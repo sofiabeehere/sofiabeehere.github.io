@@ -1,6 +1,6 @@
 <!-- 
 
-Portfolio Website ("Contact") by Sofia Bautista ©
+Portfolio Website ("Cerulean") by Sofia Bautista ©
 Created: December 2016
 Last modifed: N/A
 
@@ -176,26 +176,26 @@ Languages used: HTML5, CSS3, and JS (JQuery)
 	<p>From the user's point of view, their experience upon first visiting the web application would as follows:</p>
 
 	<!-- [slideshow/lightbox of web application screenshots with the following as captions:] -->
-	<div class="wireframes">
-			<div>
-				<a href="http://placehold.it/700x450" data-caption = "test">
-					<img src="http://placehold.it/700x450"/>
-				</a>
-				<p>1. Visit the "Admissions" tab to fill out a new student application. From there, they can enter their personal information, contact details of both the student and their guardian(s), and the courses the student wishes to take. If they leave out required fields, warnings will appear to fill them out before the form is submitted to school administration.</p>
-			</div>
-			<div>
-				<a href="http://placehold.it/700x450">
-					<img src="http://placehold.it/700x450"/>
-				</a>
-				<p> 2. Once they successfully fill out and submit the application, they will receive a unique username and temporary password to login to their account, asking them to login promptly to change their password. </p>
-			</div>
-			<div>
-				<a href="http://placehold.it/700x450">
-					<img src="http://placehold.it/700x450"/>
-				</a>
-				<p> 3. Using the temporary login details, they can login and view the courses they have signed up for, as well as change their username and password. </p>
-			</div>
+	<div class="screenshots">
+		<div>
+			<a href="./img/3/screenshots 1.png">
+				<img src="./img/3/screenshots 1.png"/>
+			</a>
+			<p>1. Visit the "Admissions" tab to fill out a new student application. From there, they can enter their personal information, contact details of both the student and their guardian(s), and the courses the student wishes to take. If they leave out required fields, warnings will appear to fill them out before the form is submitted to school administration.</p>
 		</div>
+		<div>
+			<a href="./img/3/screenshots 2.png">
+				<img src="./img/3/screenshots 2.png"/>
+			</a>
+			<p> 2. Once they successfully fill out and submit the application, they will receive a unique username and temporary password to login to their account, asking them to login promptly to change their password. </p>
+		</div>
+		<div>
+			<a href="./img/3/screenshots 3.png">
+				<img src="./img/3/screenshots 3.png"/>
+			</a>
+			<p> 3. Using the temporary login details, they can login and view the courses they have signed up for, as well as change their username and password. </p>
+		</div>
+	</div>
 		<!-- Carousel function from http://kenwheeler.github.io/slick/ -->
 		<!-- Lightbox add-on function from https://github.com/mreq/slick-lightbox -->
 	
@@ -210,7 +210,7 @@ Languages used: HTML5, CSS3, and JS (JQuery)
 	<p><a href = "./img/3/step 2 report.pdf"> Step 2 Technical Report </a></p>
 	<p><a href = "./img/3/step 3 report.pdf"> Step 3 Technical Report </a></p>
 
-	<p> The code for this project can be found on my GitHub or by <a href = "#">clicking here</a>. </p>
+	<p> The code for this project can be found on my GitHub or by <a href = "https://github.com/sofiabeehere/cerulean-sis">clicking here</a>. </p>
 
 	</article>
 
@@ -237,12 +237,26 @@ Languages used: HTML5, CSS3, and JS (JQuery)
       			nextArrow:"<img class='a-right control-c next slick-next' src='../img/next-page.svg'>"
 		});
 
+		$('.screenshots').slick({
+			slidesToShow: 1,
+			dots: true,
+			adaptiveHeight: true,
+			accessibility: false,
+			prevArrow:"<img class='a-left control-c prev slick-prev' src='../img/previous-page.svg'>",
+      			nextArrow:"<img class='a-right control-c next slick-next' src='../img/next-page.svg'>"
+		});
+
 		$('.personas').slickLightbox({
 			itemSelector        : 'a',
 			navigateByKeyboard  : false
 		});
 
 		$('.wireframes').slickLightbox({
+			itemSelector        : 'a',
+			navigateByKeyboard  : false
+		});
+
+		$('.screenshots').slickLightbox({
 			itemSelector        : 'a',
 			navigateByKeyboard  : false
 		});
