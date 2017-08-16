@@ -124,22 +124,29 @@ Languages used: HTML5, CSS3, and JS (JQuery)
 
 		<div class = "grid-col-75of100">
 			
-			<!-- <div class = "filter">
+			<div class = "filter">
 				<button class = "filter-button"> FILTER </button>
-				<ul class = "filter-list">
-					<li><a href = ""><span>all</span></a></li>
-					<li><a href = ""><span>ui / ux</span></a></li>
-					<li><a href = ""><span>web</span></a></li>
-					<li><a href = ""><span>other</span></a></li>
-				</ul>
-			</div> -->
+				<div class = "filter-list">
+					
+					<input type="radio" id="all" name="filter" checked = "checked"/>
+					<label for="all" class = "all" style = "border-bottom: 1px solid black;">all</label>
+					
+					<input type="radio" id="ui-ux" name="filter" />
+					<label for="ui-ux" class = "ui-ux">ui / ux</label>
+					
+					<input type="radio" id="web" name="filter"/>
+					<label for="web" class = "web">web</label>
+					
+					<input type="radio" id="other" name="filter"/>
+					<label for="other" class = "other">other</label>
+				</div>
+			</div>
 
 			<section class = "main-content-work">
 
-				<!-- When time to implement filter, encapsulate grid rows with <div - class "hidden" id = "[type of work (i.e. ui / ux)]"> -->
-
 				<div class = "grid-row">
 					<div class = "grid-col-33of100">
+					<div class = "tile web">
 						<a href = "./portfolio/portfolio_website.html">
 						<figure class = "experience-card" id = "trigger-page1">
 							<img src = "./portfolio/img/1/portfolio preview.png" alt = "experience 1 image" class = "experience-img">
@@ -152,20 +159,24 @@ Languages used: HTML5, CSS3, and JS (JQuery)
 						</figure>
 						</a>
 					</div>
+					</div>
 					<div class = "grid-col-33of100">
+					<div class = "tile ui-ux">
 						<a href = "./portfolio/companion.html">
 						<figure class = "experience-card" id = "trigger-page2">
 							<img src = "./portfolio/img/2/companion preview.png" alt = "experience 2 image" class = "experience-img">
 							<figcaption class = "experience-card-caption">
 								<div class = "wrap">
 									<h5> COMPANION APP <br> FEATURE DESIGN </h5>
-									<p> mobile, ui/ux </p>	
+									<p> ui/ux, mobile </p>	
 								</div>
 							</figcaption>
 						</figure>
 						</a>
 					</div>
+					</div>
 					<div class = "grid-col-33of100" id = "trigger-page3">
+					<div class = "tile web">
 						<a href = "./portfolio/cerulean.html">
 						<figure class = "experience-card">
 							<img src = "./portfolio/img/3/cerulean preview.png" alt = "experience 3 image" class = "experience-img">
@@ -178,8 +189,10 @@ Languages used: HTML5, CSS3, and JS (JQuery)
 						</figure>
 						</a>
 					</div>
+					</div>
 					
 					<div class = "grid-col-33of100">
+					<div class = "tile other">
 						<a href = "./portfolio/k9_infographic.html">
 						<figure class = "experience-card" id = "trigger-page4">
 							<img src = "./portfolio/img/4/k9_infographic_preview.png" alt = "experience 4 image" class = "experience-img">
@@ -192,7 +205,9 @@ Languages used: HTML5, CSS3, and JS (JQuery)
 						</figure>
 						</a>
 					</div>
+					</div>
 					<div class = "grid-col-33of100">
+					<div class = "tile web">
 						<a href = "./portfolio/addl_redesign.html">
 						<figure class = "experience-card" id = "trigger-page5">
 							<img src = "./portfolio/img/5/addl preview.png" alt = "experience 4 image" class = "experience-img">
@@ -205,7 +220,9 @@ Languages used: HTML5, CSS3, and JS (JQuery)
 						</figure>
 						</a>
 					</div>
-					<!-- <div class = "grid-col-33of100">
+					</div>
+					<div class = "grid-col-33of100">
+					<div class = "tile web">
 						<a href = "./portfolio/ascend_redesign.html">
 						<figure class = "experience-card" id = "trigger-page6">
 							<img src = "./portfolio/img/6/ascend preview.png" alt = "experience 6 image" class = "experience-img">
@@ -217,7 +234,8 @@ Languages used: HTML5, CSS3, and JS (JQuery)
 							</figcaption>
 						</figure>
 						</a>
-					</div> -->
+					</div>
+					</div>
 					<!-- Entry Placeholders for Future Projects:
 					<div class = "grid-col-33of100">
 						<figure class = "experience-card" id = "trigger-page7">
