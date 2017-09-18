@@ -1,0 +1,271 @@
+<!-- 
+
+Portfolio Website ("Ascend Rebranding & Content Strategy") by Sofia Bautista ©
+Created: December 2016
+Last modifed: September 2017
+
+Languages used: HTML5, CSS3, and JS (JQuery)
+
+-->
+
+<!doctype html>
+<html lang = "en">
+<head>
+
+	<title> Sofia Bautista | Ascend Rebranding & Content Strategy </title>
+		<meta charset = "utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!--<meta http-equiv="refresh" content="0; url=http://repo.github.io/folder/index.html" /> -->
+
+		<!-- Loads CSS Stylesheets-->
+		<link rel="stylesheet" href="../css/main.css">
+		<link rel="stylesheet" href="../css/grid.css">
+		<link rel="stylesheet" type="text/css" href="../js/slick/slick/slick.css"/>
+  		<link rel="stylesheet" type="text/css" href="../js/slick/slick/slick-theme.css"/>
+  		<link rel="stylesheet" type="text/css" href="../js/slick-lightbox/slick-lightbox.css"/>
+		<link rel="icon" href = "../img/favicon.ico">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="../js/jquery.min.js"></script>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+</head>
+	<body>
+
+	<section class = "mobile-sidebar" id = "mobile-sidebar">
+
+		<header class = "header-logo">
+
+			<img src = "../img/logo.svg" alt= "personal logo" class = "logo"/>
+			
+			<aside>
+				<h2> Sofia Bautista </h2>
+				<h3> UI/UX Designer | Web Developer</h3>
+			</aside>
+
+			<div class = "menu-btn">
+				<h4> MENU </h4>
+				<img src = "../img/menu.svg" alt = "menu button" id = "menu-icon">
+			</div>
+
+		</header>
+
+		<div class = "mobile-nav">
+			<ul class = "nav-list">
+				<li><a href = "../index.html"><span>WORK</span></a></li>
+				<li><a href = "../about.html"><span>ABOUT</span></a></li>
+				<li><a href = "../contact.html"><span>CONTACT</span></a></li>
+			</ul>
+		</div>
+
+	</section>
+
+	<div id = "mini-header">
+
+		<a href = "../index.html">
+
+			<img src = "../img/back.svg" alt = "back img" class = "back-icon"/>
+
+			<img src = "../img/logo.svg" alt = "go back to home button" class = "logo-icon"/>
+
+		</a>
+
+		<span> back </span>
+
+	</div>
+
+	<section class = "main-content-portfolio">
+
+	<h1 style = "margin: 0 25%;"> ASCEND REBRAND & CONTENT STRATEGY  </h1>
+
+	<article>
+		
+		<div class = "hero-img"><img src = "./img/6/ascend banner.png"/></div>
+
+		<h2> background </h2>
+
+		<p> In anticipation for the new school year, principal, and curriculum, Ascend Online (an independent K-12 distance learning school located in Kamloops, BC where I work as an Instructional Design Assistant) performed a major upgrade of all online services, especially the school website and Moodle website. As a result, the school as a whole sought out a new brand identity to represent these changes, in addition to another way in which school website content can be organized to allow staff, students, and especially parents to find important information and resources easily without confusion or frustration. </p>
+
+		<h2> challenge </h2>
+
+		<p> As a previous student and now employee of Ascend, I was ecstatic about being given the opportunity to create new branding which can be seen by families and individuals across the province. With that came a lot of pressure to design a brand that properly represented the school and its constituents. I went through many preliminary drafts of the logo and colour scheme, to the point where I changed the colours of the logo right before my presentation to the school staff. Throughout this project, I had to constantly remind myself to disregard this pressure and instead reflect on the extraordinary experiences I have heard from current students and families (including my own), which eventually became my inspiration as I worked. </p>
+
+		<h2> role </h2>
+
+		<p> During this project, I worked with Sebastian Salas, one of my supervisors and the IT Support Manager for Ascend, who was responsible for publishing the new websites and eventually, integrating the new branding and content strategy I created. I was the sole designer and strategist in this project - I determined the final information architecture of the school website, researched and drafted possible colour schemes for the new branding, as well as produced the final logo on Adobe Illustrator. </p>
+
+		<h2> ideation </h2>
+
+		<h3> content strategy </h3>
+
+		<p> In order for Sebastian to start developing the new school website, I first had to define the information architecture of the new school website. I began by looking at the navigation structure of the previous school website according to human-computer interaction models and theories, thus revealing the following issues: </p>
+
+		<!-- [screenshot of old navigation] -->
+		<img class = "graphic" src="./img/6/old nav.png"/>
+
+		<ol>
+			<li> 
+				<p> Two separate navigation menus - there are too many categories for users to choose from, at two different locations of the website no less. Consequently, it takes more processing time and power for users to find the information they are looking for. This is in adherence to <a href = "https://www.interaction-design.org/literature/article/hick-s-law-making-the-choice-easier-for-users">Hick's Law</a>, which defines the correlation regarding the more choices a user has to select from, the longer their reaction time. </p>
+
+				<p> By examining the distance between the two menus and the size of their buttons, <a href = "https://www.interaction-design.org/literature/article/fitts-s-law-the-importance-of-size-and-distance-in-ui-design">Fitts Law</a> must also be taken into consideration, because small objects placed far away from the user's starting position take longest to select. </p>
+			</li>
+			<li> Arbitrary organization of categories - an example of this would be the "Programs" tab containing information about the Kindergarten-Grade 9 program, but having "High School" and "Special Ed." as separate tabs. There are also a variety of links and pages lumped under the "Parents" tab in "Important Links & Information" that can also be of use for students and staff. In agreement of <a href = "https://www.interaction-design.org/literature/book/the-glossary-of-human-computer-interaction/gestalt-principles-of-form-perception">Gestalt psychology</a>, particularly the laws of similarity, proximity, and connectivity, it would be expected that all school programs should be under the "Programs" tab and visually look the same to appear as such.</li>
+			<li> 
+				<p> Disassociation of login buttons to crucial, external services like the student information system (SIS) and learning management system (LMS) from the rest of second navigation menu - in both navigation menus, tabs are meant to be hovered over and do not lead to new pages (i.e. their child links are supposed to lead to separate pages, not the tabs themselves). However, the two login buttons page are visually similar to the hoverable tabs, so at a glance they do not appear to be actionable buttons. </p>
+
+				<p> According to Gibson's definition of <a href = "https://www.interaction-design.org/literature/book/the-glossary-of-human-computer-interaction/affordances">affordances</a>, these buttons have the affordance of buttons, in which they are clickable, visually change state and reveal a new url when hovered over, but this affordance is hidden because they are grouped with and look too visually similar to the hoverable tabs in the navigation menu they are in. </p>
+			</li>
+		</ol>
+
+		<p> I reflected on these findings when I created a new information architecture and possible navigation menu implementations for the new school website: </p>
+
+		<div class="sketches">
+			<div>
+				<p> Outline of Information Architecture </p>
+				<a href="./img/6/ascend redesign IA diagram.jpg">
+					<img src="./img/6/ascend redesign IA diagram.jpg"/>
+				</a>
+			</div>
+			<div>
+				<p> Preliminary Navigation Menu Sketch </p>
+				<a href="./img/6/ascend redesign sketch.jpg">
+					<img src="./img/6/ascend redesign sketch.jpg"/>
+				</a>
+			</div>
+			<div>
+				<p> Wireframes of Possible Navigation Menu Implementations </p>
+				<a href="./img/6/wireframes 1.png">
+					<img src="./img/6/wireframes 1.png"/>
+				</a>
+			</div>
+			<div>
+				<p> Wireframes of Possible Navigation Menu Implementations </p>
+				<a href="./img/6/wireframes 2.png">
+					<img src="./img/6/wireframes 2.png"/>
+				</a>
+			</div>
+			<div>
+				<p> Wireframes of Possible Navigation Menu Implementations </p>
+				<a href="./img/6/wireframes 3.png">
+					<img src="./img/6/wireframes 3.png"/>
+				</a>
+			</div>
+		</div>
+		<!-- Carousel function from http://kenwheeler.github.io/slick/ -->
+		<!-- Lightbox add-on function from https://github.com/mreq/slick-lightbox -->
+
+		<h3> rebranding </h3>
+
+		<p> As previously mentioned, I went through many preliminary drafts of the logo and considered multiple colour schemes. By straying away from the original vibrant green and blue, it was the aim of both Sebastian and I to make the branding easier on the eyes for digital display purposes, so we cultivated <a href = "./img/6/style guide options.pdf">style guides</a> using colour schemes with purple as the main colour (as it was a <a href = "http://www.catholic.org/clife/lcolors.php">liturgical colour</a> symbolizing rebirth and created good contrast on digital devices) and a refreshing teal as a secondary colour. Nevertheless, while we were finalizing the website demos, a bureaucratic decision was made by other staff members through the principal about keeping the green as the main colour, as well as continuing to have a dove in the new logo. Considering this, I created a new colour scheme and started sketching out possible logos for the branding: </p>
+
+		<!-- [sketches of possible logos] -->
+		<img class = "graphic" src="./img/6/logo sketches.jpg" style = "width: 50% !important;"/>
+
+		<h2> execution </h2>
+
+		<h3> content strategy </h3>
+
+		<p> As depicted in the wireframes above, the decided information architecture was implemented into the new school website: </p>
+
+		<!-- [screenshot of new navigation menu]] -->
+		<img class = "graphic" src="./img/6/new nav.png"/>
+
+		<h3> rebranding </h3>
+
+		<p> With the new colour scheme in mind, the final logo was inspired by online map pins. Ascend serves families and staff all across the map, most of them in British Columbia, but we also serve BC residents in other provinces (and sometimes even those in other countries). The empty pin can be filled with these families and staff members, but all come together the bright green pin that is Ascend. The dove has always represented the ascension of these families and staff to educational success, alongside its theological association with the Holy Spirit, which is said to be omnipresent no matter where and when. </p>
+
+		<div class="brand-identity">
+			<div>
+				<p> Final Style Guide </p>
+				<a href="./img/6/final style guide.png">
+					<img src="./img/6/final style guide.png"/>
+				</a>
+			</div>
+			<div>
+				<p> Final Logo Design </p>
+				<a href="./img/6/final logo design.png">
+					<img src="./img/6/final logo design.png"/>
+				</a>
+			</div>
+		</div>
+		<!-- Carousel function from http://kenwheeler.github.io/slick/ -->
+		<!-- Lightbox add-on function from https://github.com/mreq/slick-lightbox -->
+
+		<h2> results </h2>
+
+		<p> It was only until recently that the established information architecture was accessible through the new school website, but administrators reported to have received less emails from parents and staff about where and how to access the SIS, LMS, forms, and resource links. After presenting the rebranding and new content strategy to staff members at a professional development retreat in August 2017 before the school year began, there were many requests to develop a branding kit for teachers to include in their own online and printed materials sent to parents and students. In creating the branding kit, I learned how to create branding material across any medium and platform. Nonetheless, as the school year progresses, I hope to hear from parents through my coworkers about their thoughts on Ascend's new brand identity. </p>
+
+	</article>
+
+	</section>
+
+	<script type="text/javascript" src="../js/slick/slick/slick.min.js"></script>
+	<script type="text/javascript" src="../js/slick-lightbox/slick-lightbox.js"></script>
+	<script type="text/javascript">
+		$('.sketches').slick({
+			slidesToShow: 1,
+			dots: true,
+			adaptiveHeight: true,
+			accessibility: false,
+			prevArrow:"<img class='a-left control-c prev slick-prev' src='../img/previous-page.svg'>",
+      			nextArrow:"<img class='a-right control-c next slick-next' src='../img/next-page.svg'>"
+		});
+
+		$('.sketches').slickLightbox({
+			itemSelector        : 'a',
+			navigateByKeyboard  : false
+		});
+
+		$('.brand-identity').slick({
+			slidesToShow: 1,
+			dots: true,
+			adaptiveHeight: true,
+			accessibility: false,
+			prevArrow:"<img class='a-left control-c prev slick-prev' src='../img/previous-page.svg'>",
+      			nextArrow:"<img class='a-right control-c next slick-next' src='../img/next-page.svg'>"
+		});
+
+		$('.brand-identity').slickLightbox({
+			itemSelector        : 'a',
+			navigateByKeyboard  : false
+		});
+	  </script>
+	<script src="../js/zepto.js"></script>
+	<!-- <script src="../js/script.js"></script> -->
+	<script>
+		"use strict";
+
+		console.log("Javascript is running!");
+
+		$(window).on('load resize', function () {
+
+			var width = window.innerWidth;
+
+			console.log("Width: "+width);
+
+				if (width<945) {
+					document.getElementById("mini-header").style.display = "none";
+					document.getElementById("mobile-sidebar").style.display = "block";
+					$(".mobile-nav").hide();
+
+
+				$(".menu-btn").click(function(){
+					if ( $('#menu-icon').attr('src') == '../img/menu.svg' ) {
+						$("#menu-icon").attr("src","../img/close.svg");
+						$(".mobile-nav").slideDown();
+					} else {
+						$("#menu-icon").attr("src","../img/menu.svg");
+						$(".mobile-nav").slideUp();
+					}
+	   			 });
+
+				} else {
+					document.getElementById("mini-header").style.display = "block";
+					document.getElementById("mobile-sidebar").style.display = "none";
+				}
+
+		});
+
+	</script>
+
+	</body>
+</html>
