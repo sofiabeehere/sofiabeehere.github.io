@@ -2,7 +2,7 @@
 
 Portfolio Website by Sofia Bautista ©
 Created: December 2016
-Last modifed: N/A
+Last modifed: September 2017
 
 Languages used: HTML5, CSS3, and JS (JQuery)
 
@@ -18,6 +18,8 @@ $(window).on('load resize', function () {
 
 	console.log("Width: "+width);
 
+
+		// Handles mobile navigation animations
 		if (width<945) {
 			document.getElementById("sidebar").style.display = "none";
 			document.getElementById("mobile-sidebar").style.display = "block";
@@ -28,9 +30,11 @@ $(window).on('load resize', function () {
 				if ( $('#menu-icon').attr('src') == 'img/menu.svg' ) {
 					$("#menu-icon").attr("src","img/close.svg");
 					$(".mobile-nav").slideDown();
+					$('body').css({'overflow':'hidden'});
 				} else {
 					$("#menu-icon").attr("src","img/menu.svg");
 					$(".mobile-nav").slideUp();
+					$('body').css({'overflow':'auto'});
 				}
    			 });
 
@@ -40,6 +44,7 @@ $(window).on('load resize', function () {
 			$(".filter").css({'margin-top':'0'});
 		}
 
+		// Handles dynamic filtering on home/work page
 		if ($(".filter-list").change(function() {
 
 			if ($('#web').is(':checked')) {
