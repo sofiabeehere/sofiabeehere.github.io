@@ -26,7 +26,8 @@ $(window).on('load resize', function () {
 			$(".filter").css({'margin-top':'2em'});
 			$(".mobile-nav").hide();
 			
-			$(".menu-btn").on("vclick",function(){
+			$(".menu-btn").bind('touchstart mousedown',function(){
+// 			$(".menu-btn").on("vclick",function(){
 				if ( $('#menu-icon').attr('src') == 'img/menu.svg' ) {
 					$("#menu-icon").attr("src","img/close.svg");
 					$(".mobile-nav").slideDown();
