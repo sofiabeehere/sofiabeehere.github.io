@@ -2,9 +2,9 @@
 
 Portfolio Website by Sofia Bautista ©
 Created: December 2016
-Last modifed: September 2017
+Last modifed: N/A
 
-Languages used: HTML5, CSS3, and JS (JQuery)
+Languages used: HTML5, CSS3, and JS (Zepto.js)
 
 */
 
@@ -237,10 +237,16 @@ body {
 
 /* Mobile Navigation */
 
+.mobile-sidebar {
+	position: fixed;
+	width: 100vw;
+	z-index: 2;
+	background-color: #fff;
+}
+
 .mobile-nav {
 	margin: 40% 0;
 	height: 100vh;
-	border-bottom: 0.5px solid black;;
 }
 
 .mobile-nav ul {
