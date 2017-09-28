@@ -14,7 +14,9 @@ console.log("Javascript is running!");
 
 $(window).on('load resize', function () {
 
-	var width = window.innerWidth;
+var width = $(window).width();
+
+if($(window).width() != width && $(window).height() != height){
 
 	console.log("Width: "+width);
 
@@ -25,12 +27,13 @@ $(window).on('load resize', function () {
 			document.getElementById("mobile-sidebar").style.display = "block";
 			$(".filter").css({'margin-top':'2em'});
 			$(".mobile-nav").hide();
-			
+
 			$(".mobile-nav").each (function() {
 				$(this).css("height", $(this).height());
 			});
 			
- 			$(".menu-btn").on("touchstart",function(){
+			// $(".menu-btn").bind('touchstart mousedown',function(){
+			$(".menu-btn").on("touchstart",function(){
 				$(".mobile-nav").slideToggle();
 				if($(".mobile-nav").is(":visible")){
 					$("#menu-icon").attr("src","img/close.svg");
@@ -108,4 +111,5 @@ $(window).on('load resize', function () {
 
 		}));
 		
+};
 });
