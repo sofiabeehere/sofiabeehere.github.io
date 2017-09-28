@@ -26,6 +26,10 @@ $(window).on('load resize', function () {
 			$(".filter").css({'margin-top':'2em'});
 			$(".mobile-nav").hide();
 			
+			$(".mobile-nav").each (function() {
+				$(this).css("height", $(this).height());
+			});
+			
  			$(".menu-btn").on("touchstart",function(){
 				if ( $('#menu-icon').attr('src') == 'img/menu.svg' ) {
 					$("#menu-icon").attr("src","img/close.svg");
