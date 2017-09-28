@@ -26,14 +26,14 @@ $(window).on('load resize', function () {
 			$(".filter").css({'margin-top':'2em'});
 			$(".mobile-nav").hide();
 			
- 			$(".menu-btn").on("click",function(){
+ 			$(".menu-btn").on("click touchstart",function(){
 				if ( $('#menu-icon').attr('src') == 'img/menu.svg' ) {
 					$("#menu-icon").attr("src","img/close.svg");
-					$(".mobile-nav").slideToggle();
+					$(".mobile-nav").slideDown();
 					$('body').css({'overflow':'hidden'});
 				} else {
 					$("#menu-icon").attr("src","img/menu.svg");
-// 					$(".mobile-nav").slideUp();
+ 					$(".mobile-nav").slideUp();
 					$('body').css({'overflow':'auto'});
 				}
    			 });
