@@ -4,7 +4,7 @@ Portfolio Website by Sofia Bautista ©
 Created: December 2016
 Last modifed: September 2017
 
-Languages used: HTML5, CSS3, and JS (JQuery.js)
+Languages used: HTML5, CSS3, and JS (JQuery)
 
 */
 
@@ -247,6 +247,7 @@ body {
 .mobile-nav {
 	margin: 40% 0;
 	height: 100vh;
+	width: 100vw;
 }
 
 .mobile-nav ul {
