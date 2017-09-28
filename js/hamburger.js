@@ -12,29 +12,14 @@ Languages used: HTML5, CSS3, and JS (JQuery)
 
 console.log("Javascript is running!");
 
-// var cachedWidth = $(window).width();
-//     $(window).resize(function(){
-//         var newWidth = $(window).width();
-//         if(newWidth !== cachedWidth){
-//             //DO RESIZE HERE
-//             cachedWidth = newWidth;
-//         }
-//     });
+$(window).on('load resize', function () {
 
-var cachedWidth = $(window).width();
+var width = $(window).width();
 
-$(window).on('resize load', function () {
-
-var newWidth = $(window).width();
-
-//var width = $(window).width();
-
-if(newWidth !== cachedWidth){
-
-	console.log("Width: "+cachedWidth);
+	console.log("Width: "+width);
 
 		// Handles mobile navigation animations
-		if (cachedWidth<945) {
+		if (width<945) {
 			document.getElementById("sidebar").style.display = "none";
 			document.getElementById("mobile-sidebar").style.display = "block";
 			$(".filter").css({'margin-top':'2em'});
@@ -122,6 +107,5 @@ if(newWidth !== cachedWidth){
 			}
 
 		}));
-	};
 		
 });
