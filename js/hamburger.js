@@ -31,14 +31,22 @@ $(window).on('load resize', function () {
 			});
 			
  			$(".menu-btn").on("touchstart",function(){
-				if ( $('#menu-icon').attr('src') == 'img/menu.svg' ) {
+				$(".mobile-nav").slideToggle();
+				if($(".mobile-nav").is(":visible")){
 					$("#menu-icon").attr("src","img/close.svg");
-					$(".mobile-nav").slideDown();
 					$('body').css({'overflow':'hidden'});
 				} else {
 					$("#menu-icon").attr("src","img/menu.svg");
- 					$(".mobile-nav").slideUp();
 					$('body').css({'overflow':'auto'});
+				}
+				// if ( $('#menu-icon').attr('src') == 'img/menu.svg' ) {
+				// 	$("#menu-icon").attr("src","img/close.svg");
+				// 	$(".mobile-nav").slideDown();
+				// 	$('body').css({'overflow':'hidden'});
+				// } else {
+				// 	$("#menu-icon").attr("src","img/menu.svg");
+				// 	$(".mobile-nav").slideUp();
+				// 	$('body').css({'overflow':'auto'});
 				}
    			 });
 
