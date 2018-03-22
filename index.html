@@ -1,0 +1,89 @@
+<!-- 
+Portfolio Website by Sofia Bautista
+Created: December 2016
+Last modifed: June 2017
+Languages used: HTML5, CSS3, and JS (Zepto.js)
+-->
+
+<!doctype html>
+<html lang = "en">
+<head>
+
+    <title> Sofia Bautista | Hello! </title>
+        <meta charset = "utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--<meta http-equiv="refresh" content="0; url=http://repo.github.io/folder/index.html" /> -->
+
+        <!-- Loads CSS Stylesheets-->
+        <style>
+        @import url('https://fonts.googleapis.com/css?family=Merriweather:300i');
+        @font-face { /* h1 heading*/
+            font-family: 'Bebas Neue';
+            font-weight: normal;
+            font-style: normal;
+            src: url('fonts/BebasNeue.eot');
+            src: url('fonts/BebasNeue.eot?#iefix') format('embedded-opentype'),
+                url('fonts/BebasNeue.woff2') format('woff2'),
+                url('fonts/BebasNeue.woff') format('woff'),
+                url('fonts/BebasNeue.ttf') format('truetype');
+        }
+        @keyframes slideDown {
+            0% {
+                transform: translateY(-50%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        @keyframes fade {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        body {
+            margin: 8% 30%;
+        }
+        header img {
+            display: block;
+            width: 30%;
+            margin: auto;
+        }
+        h1 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 26pt;
+            letter-spacing: 0.1em;
+            text-align: center;
+            padding: 0.5em 0;
+            animation: 0.5s linear 0s 1 slideDown;
+        }
+        h2 {
+            font-family: 'Merriweather', sans-serif;
+            font-size: 15pt;
+            text-align: center;
+            opacity: 0;
+            animation: 0.5s linear 1s 1 fade;
+            animation-fill-mode: forwards;
+        }
+        </style>
+
+</head>
+<body>
+
+    <!-- <h1> Hello! Welcome to Sofia Bautista's Portfolio Website. </h1>
+    <h2> Currently under construction, so please bear with me! </h2>
+    <p> Please come back later for updates! </p> -->
+    <header>
+    <img src = "./logo.svg" alt = "personal logo">
+    </header>
+
+    <h1> UNDER CONSTRUCTION </h1>
+    <h2> Please come back later for updates! </h2>
+
+</body>
+
+</html>
