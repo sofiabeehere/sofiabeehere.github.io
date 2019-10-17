@@ -1,0 +1,48 @@
+/* TYPOGRAPHY */
+@import url('https://fonts.googleapis.com/css?family=Assistant:400,700|Merriweather:400,700&display=swap');
+
+/* GENERAL */
+
+html {
+    border-top: solid 7px #D9B45F;
+}
+
+body {
+    margin: 8% 25%;
+    line-height: 0;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        margin: 20% 15%;
+    }
+}
+
+/* HEADER */
+header {
+    img {
+        display: block;
+        width: 10%;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+/* SOCIAL MEDIA FOOTER */
+footer {
+    margin-top: 3em;
+
+    a {
+        @include fluid-type($min_width, $max_width, 18px, 22px);
+        color: rgba(0, 0, 0, 0.5);
+        margin-right: 1em;
+        transition: color 0.5s;
+
+        &:hover {
+            color: rgba(0, 0, 0, 1);
+            transition: color 0.5s;
+        }
+    }
+}

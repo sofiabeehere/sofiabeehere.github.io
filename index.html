@@ -1,85 +1,108 @@
 <!-- 
-Portfolio Website by Sofia Bautista
+Personal Website by Sofia Bautista
 Created: December 2016
-Last modifed: March 2018
-Languages used: HTML5, CSS3, and JS
+Last modifed: October 2019
+Languages used: HTML5, CSS3 (SASS), and JS (JQuery)
 -->
 
 <!doctype html>
 <html lang = "en">
 <head>
 
-    <title> Sofia Bautista | Hello! </title>
+    <title> Sofia Bautista | Hello there! </title>
         <meta charset = "utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!--<meta http-equiv="refresh" content="0; url=http://repo.github.io/folder/index.html" /> -->
+        <!-- <meta http-equiv="refresh" content="0; url=http://repo.github.io/folder/index.html"/> -->
 
-        <!-- Loads CSS Stylesheets-->
-        <style>
-        @import url('https://fonts.googleapis.com/css?family=Merriweather:300i');
-        @font-face { /* h1 heading*/
-            font-family: 'Bebas Neue';
-            font-weight: normal;
-            font-style: normal;
-            src: url('css/fonts/BebasNeue.eot');
-            src: url('css/fonts/BebasNeue.eot?#iefix') format('embedded-opentype'),
-                url('css/fonts/BebasNeue.woff2') format('woff2'),
-                url('css/fonts/BebasNeue.woff') format('woff'),
-                url('css/fonts/BebasNeue.ttf') format('truetype');
-        }
-        @keyframes slideDown {
-            0% {
-                transform: translateY(-50%);
-                opacity: 0;
-            }
-            100% {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-        @keyframes fade {
-            0% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 1;
-            }
-        }
-        body {
-            margin: 8% 30%;
-        }
-        header img {
-            display: block;
-            width: 30%;
-            margin: auto;
-        }
-        h1 {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 26pt;
-            letter-spacing: 0.1em;
-            text-align: center;
-            padding: 0.5em 0;
-            animation: 0.5s linear 0s 1 slideDown;
-        }
-        h2 {
-            font-family: 'Merriweather', sans-serif;
-            font-size: 15pt;
-            text-align: center;
-            opacity: 0;
-            animation: 0.5s linear 1s 1 fade;
-            animation-fill-mode: forwards;
-        }
-        </style>
+        <!-- Stylesheets-->
+        <link rel="stylesheet" type="text/css" href="css/manifest.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/fontawesome.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/brands.min.css" rel="stylesheet">
+
+        <!-- Libraries -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-150303969-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-150303969-1');
+        </script>
 
 </head>
 <body>
 
     <header>
-    <img src = "./logo.svg" alt = "personal logo">
+        <img src="img/logo.svg" id="logo" alt="personal logo">
     </header>
+    
+    <div id="intro">
+        <h1>Hello there!</h1>
+        <h2>I'm Sofia Bautista.</h2>
 
-    <h1> UNDER CONSTRUCTION </h1>
-    <h2> Please come back later for updates! </h2>
+        <p>I’m currently Lead UX Designer/Developer @ <a href="https://evidentpoint.com/" target="_blank">Evident Point Software</a> working on making online reading experiences better.</p>
+
+        <p>If I’m not at work, I’m at <a href="https://www.sfu.ca/" target="_blank">Simon Fraser University</a> wrapping up my BSc in <a href="http://www.sfu.ca/siat.html" target="_blank">IAT</a> + <a href="http://www.sfu.ca/communication.html" target="_blank">CMNS</a> part-time. I also like teaching young people about technology and design.</p>
+
+        <p>Want to know more? <a href="#contact" id="open-form">Let’s talk</a>.</p>
+    </div>
+
+    <div id="contact">
+        <form action="https://formspree.io/xneyzaym" method="POST">
+            <input name="email" placeholder="What's your email address?" type="email" required>
+            <textarea name="message" placeholder="Start typing your message..." required></textarea>
+            <div id="actions">
+            <button type="submit" id="submit">SUBMIT</button>
+            <button type="button" id="cancel">Cancel</button>
+            </div>
+        </form>
+    </div>
+
+    <footer>
+        <a href="https://www.linkedin.com/in/sofia-bautista-a5a94b149/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://twitter.com/sofiabeehere" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://github.com/sofiabeehere" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.instagram.com/dsgnr_sofia/" target="_blank"><i class="fab fa-instagram"></i></a>
+    </footer>
+
+    <script>
+        /* Logo Animation from https://codepen.io/anodpixels/pen/qECtd */
+        var rotate = 50;
+
+        var pageX = $(document).width();
+        var pageY = $(document).height();
+        var mouseY=0;
+        var mouseX=0;
+
+        $(document).mousemove(function( event ) {
+            mouseX = event.pageY;
+            mouseY = event.pageX;
+            rotateY = -(pageY/2-mouseY)/pageY*rotate;
+            rotateX = (pageX/2-mouseX)/pageX*rotate;
+            $('#logo').css({ '-webkit-transform' : 'translateX(0) translateY(0) scale(1) perspective( 1960px ) rotateY('+rotateY+'deg) rotateX('+rotateX+'deg)'});
+        });
+
+        // Toggle Page Visibility
+        $(document).ready(function() {
+            $('#intro').show();
+            $('#contact').hide();
+
+            $("#open-form").click(function(){
+                $('#intro').hide();
+                $('#contact').show();
+            });
+
+            $("#cancel, #logo").on('click', function(){
+                $('#intro').show();
+                $('#contact').hide();
+                history.pushState(null, null, window.location.href.split('#')[0]);
+            });            
+
+        });
+    </script>
 
 </body>
 
