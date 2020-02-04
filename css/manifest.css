@@ -45,6 +45,7 @@ footer {
 /* INTRO */
 h1 {
   font-family: 'Assistant', sans-serif;
+  font-display: swap;
   font-weight: 700;
   letter-spacing: 0.1em;
   padding-top: 0.1em;
@@ -60,6 +61,7 @@ h1 {
 
 h2 {
   font-family: 'Assistant', sans-serif;
+  font-display: swap;
   font-weight: 400;
   line-height: 1em;
   letter-spacing: 0.05em; }
@@ -74,6 +76,7 @@ h2 {
 
 p {
   font-family: 'Merriweather', sans-serif;
+  font-display: swap;
   font-weight: 400;
   line-height: 176%;
   letter-spacing: 0.1em;
@@ -116,6 +119,7 @@ form {
   padding: 1em 0; }
   form input {
     font-family: 'Assistant', sans-serif;
+    font-display: swap;
     border: none;
     margin: 1em 0;
     padding: 0.8em 0.5em; }
@@ -143,6 +147,7 @@ form {
       border-bottom: solid 1px #E5E5E5; }
   form textarea {
     font-family: 'Assistant', sans-serif;
+    font-display: swap;
     border: none;
     margin-bottom: 1em;
     padding: 0.8em 0.5em;
@@ -169,6 +174,7 @@ form {
       transition: border 0.7s; }
   form button {
     font-family: 'Assistant', sans-serif;
+    font-display: swap;
     font-weight: 700;
     letter-spacing: 0.1em;
     border: solid 2px #000;

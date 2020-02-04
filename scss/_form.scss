@@ -8,6 +8,7 @@ form {
     input {
         @include fluid-type($min_width, $max_width, 16px, 20px);
         font-family: 'Assistant', sans-serif;
+        font-display: swap;
         border: none;
         margin: 1em 0;
         padding: 0.8em 0.5em;
@@ -32,6 +33,7 @@ form {
     textarea {
         @include fluid-type($min_width, $max_width, 16px, 20px);
         font-family: 'Assistant', sans-serif;
+        font-display: swap;
         border: none;
         margin-bottom: 1em;
         padding: 0.8em 0.5em;
@@ -53,6 +55,7 @@ form {
     button {
         @include fluid-type($min_width, $max_width, 12px, 16px);
         font-family: 'Assistant', sans-serif;
+        font-display: swap;
         font-weight: 700;
         letter-spacing: 0.1em;
         border: solid 2px #000;

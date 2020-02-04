@@ -31,9 +31,9 @@ Languages used: HTML5, CSS3 (SASS), and JS (JQuery)
     <meta property="twitter:image" content="img/website-meta.png">
 
     <!-- Stylesheets-->
-    <link rel="stylesheet" type="text/css" href="css/manifest.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/fontawesome.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/brands.min.css" rel="stylesheet">
+    <link rel="preload" type="text/css" href="css/manifest.css" as="style" onload="this.rel='stylesheet'">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/fontawesome.min.css" rel="preload" as="style" onload="this.rel='stylesheet'">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/brands.min.css" rel="preload" as="style" onload="this.rel='stylesheet'">
 
     <!-- Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -62,9 +62,9 @@ Languages used: HTML5, CSS3 (SASS), and JS (JQuery)
         <h1>Hello there!</h1>
         <h2>I'm Sofia Bautista.</h2>
 
-        <p>I’m currently Lead UX Designer/Developer @ <a href="https://evidentpoint.com/" target="_blank">Evident Point Software</a> working on making online reading experiences better.</p>
+        <p>I’m currently Lead UX Designer/Developer @ <a href="https://evidentpoint.com/" target="_blank" rel="noreferrer">Evident Point Software</a> working on making online reading experiences better.</p>
 
-        <p>If I’m not at work, I’m at <a href="https://www.sfu.ca/" target="_blank">Simon Fraser University</a> wrapping up my BSc in <a href="http://www.sfu.ca/siat.html" target="_blank">IAT</a> + <a href="http://www.sfu.ca/communication.html" target="_blank">CMNS</a> part-time. I also like teaching young people about technology and design.</p>
+        <p>If I’m not at work, I’m at <a href="https://www.sfu.ca/" target="_blank" rel="noreferrer">Simon Fraser University</a> wrapping up my BSc in <a href="http://www.sfu.ca/siat.html" target="_blank" rel="noreferrer">IAT</a> + <a href="http://www.sfu.ca/communication.html" target="_blank" rel="noreferrer">CMNS</a> part-time. I also like teaching young people about technology and design.</p>
 
         <p>Want to know more? <a href="#contact" id="open-form">Let’s talk</a>.</p>
     </div>
@@ -81,10 +81,10 @@ Languages used: HTML5, CSS3 (SASS), and JS (JQuery)
     </div>
 
     <footer>
-        <a href="https://www.linkedin.com/in/sofia-bautista-a5a94b149/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://twitter.com/sofiabeehere" target="_blank"><i class="fab fa-twitter"></i></a>
-        <a href="https://github.com/sofiabeehere" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://www.instagram.com/sofiabeehere/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/sofia-bautista-a5a94b149/" target="_blank" aria-label="Go to LinkedIn Profile" rel="noreferrer"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://twitter.com/sofiabeehere" target="_blank" aria-label="Go to Twitter Profile" rel="noreferrer"><i class="fab fa-twitter"></i></a>
+        <a href="https://github.com/sofiabeehere" target="_blank" aria-Label="Go to Github Profile" rel="noreferrer"><i class="fab fa-github"></i></a>
+        <a href="https://www.instagram.com/sofiabeehere/" target="_blank" aria-label="Go to Instagram Profile" rel="noreferrer"><i class="fab fa-instagram"></i></a>
     </footer>
 
     <script>
