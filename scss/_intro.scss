@@ -28,6 +28,20 @@ p {
     letter-spacing: 0.1em;
     margin: 1.5em 0;
 
+    span {
+        text-decoration: line-through;
+
+        a {
+            border-bottom: none;
+            box-shadow: none;
+
+            &:hover {
+                border-bottom: none;
+                box-shadow: none;
+            }
+        }
+    }
+
     a {
         font-weight: 700;
         color: black;
